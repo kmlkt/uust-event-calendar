@@ -105,7 +105,8 @@ function showPosts(posts) {
       }
     }
 
-    postEl.querySelector("p").textContent = post.text;
+    postEl.querySelector("p").innerHTML = post.text.replaceAll(/(?:\[(.*)\|(.*)\]|(http\S*))/gm,
+      (_, href, title, url) => `<a href="${href ?? url}"/>${title ?? decodeURI(url)}</a>`);
     rc.appendChild(postEl);
   }
 }
