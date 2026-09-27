@@ -69,7 +69,9 @@ function updatePosts() {
         showPosts(sortByDate(posts));
     } else {
         //Первые 10 постов
-        const posts = sortByDate(visible).slice(0, 10);
+        const now = new Date(Date.now());
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const posts = sortByDate(visible).filter((p) => new Date(p.year, p.month-1, p.day) >= today).slice(0, 10);
         showPosts(posts);
     }
 }
