@@ -1,67 +1,77 @@
 <!doctype html>
 <html lang="rus">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Календарь мероприятий</title>
-        <link rel="stylesheet" href="reset.css" />
-        <link rel="stylesheet" href="style.css?v=4" />
-        <script src="community-list.js?v=4"></script>
-        <script src="post-list.js?v=4"></script>
-        <script src="calendar.js?v=4"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
-            rel="stylesheet"
-        />
-    </head>
-    <body>
-        <header class="header">
-            <!-- начало хэдера -->
-            <!-- 1. Левая часть. Логотип и текст университета -->
-            <a href="/" class="logo-container">
-                <div class="logo-icon">
-                    <svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M48.8498 0.105917L15 36.0399V45.428C15 46.4639 15.8764 45.8596 16.3146 45.428L50 28.5941V0.753375C50 -0.153067 49.2332 -0.0559481 48.8498 0.105917Z" fill="white" />
-                        <path d="M1.78916 0.35952L27 27.2176L25.8614 28.8553C17.8373 28.9645 1.62651 29.1174 0.975904 28.8553C0.325301 28.5933 0.0542169 27.8727 0 27.5452C0.0542169 19.3021 0.162651 2.45576 0.162651 1.0146C0.162651 -0.426571 1.24699 -0.0226072 1.78916 0.35952Z" fill="white" />
-                    </svg>
-                </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Календарь мероприятий</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css?v=4" />
+    <script src="community-list.js?v=8"></script>
+    <script src="post-list.js?v=8"></script>
+    <script src="calendar.js?v=8"></script>
+    <script src="main.js?v=8"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+</head>
 
-                <div class="header-text">
-                    Уфимский<br />университет
-                </div>
-            </a>
-
-            <!-- 2. Правая часть. Текст "Календарь мероприятий" -->
-            <div class="header-text header-text-right">
-                Календарь<br />мероприятий
+<body>
+    <header class="header">
+        <!-- начало хэдера -->
+        <!-- 1. Левая часть. Логотип и текст университета -->
+        <a href="/" class="logo-container">
+            <div class="logo-icon">
+                <svg width="50" height="46" viewBox="0 0 50 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M48.8498 0.105917L15 36.0399V45.428C15 46.4639 15.8764 45.8596 16.3146 45.428L50 28.5941V0.753375C50 -0.153067 49.2332 -0.0559481 48.8498 0.105917Z"
+                        fill="white" />
+                    <path
+                        d="M1.78916 0.35952L27 27.2176L25.8614 28.8553C17.8373 28.9645 1.62651 29.1174 0.975904 28.8553C0.325301 28.5933 0.0542169 27.8727 0 27.5452C0.0542169 19.3021 0.162651 2.45576 0.162651 1.0146C0.162651 -0.426571 1.24699 -0.0226072 1.78916 0.35952Z"
+                        fill="white" />
+                </svg>
             </div>
-        </header> <!-- конец хэдера -->
-        <main class="content">
-            <div class="rounded-content">
-                <div id="post-sample" class="post" hidden>
-                    <h4 class="date">24 августа</h4>
-                    <a class="community-name" href="https://vk.com" target="_blank">Сектор киберспорта УУНиТ</a>
-                    <div class="photo">
-                        <button class="left"></button>
-                        <button class="right"></button>
-                        <div class="filter"></div>
-                        <div class="images"></div>
-                        <div class="backgrounds"></div>
-                    </div>
-                    <p>Долгожданный отбор в команду сектора киберспорта УУНиТ открыт!
 
-    Новый учебный год = новый сезон, а это значит что мы запускаем отбор в составы университетских сборных и команду сектора. Ищем не только игроков, но и тех, кто готов своими руками и идеями строить киберспортивное движение в нашем университете.
-
-    Во всех игровых дисциплинах будут формироваться мужские и женские сборные. Среди них: Counter-Strike 2, Dota 2, StarCraft 2, Tekken 8, Valorant, League of Legends, Mobile Legends: Bang Bang, Standoff 2, Мир Танков (Lesta Games), Apex Legends, EA FC 25, NHL, PUBG/PUBG Mobile, Just Dance и лазертаг.
-
-    Выбирай свою дисциплину и заполняй анкету по ссылке: clck.ru/3ViZ7w
-
-    А если тебе интересна не только игра, но и все, что происходит за пределами игровой сцены, можно выбрать одно из трех направлений: — Медиа — Организация мероприятий — Каст</p>
-                </div>
+            <div class="header-text">
+                Уфимский<br />университет
             </div>
+        </a>
+
+        <!-- 2. Правая часть. Текст "Календарь мероприятий" -->
+        <div class="header-text header-text-right">
+            Календарь<br />мероприятий
+        </div>
+    </header> <!-- конец хэдера -->
+    <main class="content">
+        <div class="rounded-content">
+            <div id="post-sample" class="post" hidden>
+                <h4 class="date">24 августа</h4>
+                <a class="community-name" href="https://vk.com" target="_blank">Сектор киберспорта УУНиТ</a>
+                <div class="photo">
+                    <button class="left"></button>
+                    <button class="right"></button>
+                    <div class="filter"></div>
+                    <div class="images"></div>
+                    <div class="backgrounds"></div>
+                </div>
+                <p>Долгожданный отбор в команду сектора киберспорта УУНиТ открыт!
+
+                    Новый учебный год = новый сезон, а это значит что мы запускаем отбор в составы университетских
+                    сборных и команду сектора. Ищем не только игроков, но и тех, кто готов своими руками и идеями
+                    строить киберспортивное движение в нашем университете.
+
+                    Во всех игровых дисциплинах будут формироваться мужские и женские сборные. Среди них: Counter-Strike
+                    2, Dota 2, StarCraft 2, Tekken 8, Valorant, League of Legends, Mobile Legends: Bang Bang, Standoff
+                    2, Мир Танков (Lesta Games), Apex Legends, EA FC 25, NHL, PUBG/PUBG Mobile, Just Dance и лазертаг.
+
+                    Выбирай свою дисциплину и заполняй анкету по ссылке: clck.ru/3ViZ7w
+
+                    А если тебе интересна не только игра, но и все, что происходит за пределами игровой сцены, можно
+                    выбрать одно из трех направлений: — Медиа — Организация мероприятий — Каст</p>
+            </div>
+        </div>
         </div>
         <div class="communities">
             <p>Сообщества</p>
@@ -117,14 +127,9 @@
                 </label>
 
                 <label class="community">
-                    <input
-                        type="checkbox"
-                        value="Проректор по молодежной политике"
-                    />
-                    <span
-                        >Проректор по молодежной политике и воспитательной
-                        работе В.Н.Солодовник</span
-                    >
+                    <input type="checkbox" value="Проректор по молодежной политике" />
+                    <span>Проректор по молодежной политике и воспитательной
+                        работе В.Н.Солодовник</span>
                 </label>
 
                 <label class="community">
@@ -142,5 +147,6 @@
             БИНАРНЫЙ ПОИСК
         </div>
         <div class="calendar-scroll" id="calendarScroll"></div>
-    </body>
+</body>
+
 </html>

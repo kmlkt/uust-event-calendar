@@ -116,13 +116,3 @@ function onDaySelected(year, month, day) {
   onSelectedDayChanged(year, month, day);
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  MONTHS_TO_RENDER.forEach(([year, month]) => addCalendar(year, month));
-})
-
-
-// Пример использования
-document.addEventListener("DOMContentLoaded", () => {
-  onSelectedDayChanged = (year, month, day) => { console.log(year, month, day); };
-  highlightDays([[2026, 9, 24],[2026, 10, 2], [2026, 10, 20]])
-});

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const selectAll = document.getElementById("selectALL");
   const communityList = document.getElementById("communityList");
-  let onChange = (_) => {}
+  let onChange = (_) => {};
 
   // Создаём чекбоксы для переданных сообществ
   function setCommunities(names, onChangeAction) {
@@ -27,8 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
       label.appendChild(span);
 
       communityList.appendChild(label);
-      onChange = onChangeAction;
     });
+
+    // Сохраняем колбэк (один раз, вне цикла)
+    onChange = onChangeAction;
 
     // Сбрасываем состояние «Выбрать все»
     selectAll.checked = false;
@@ -56,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     selectAll.indeterminate = false;
 
-    // Получаем актуальный выбор
+    // Сообщаем наружу
     onChange(getSelectedCommunities());
   });
 
@@ -76,15 +78,10 @@ document.addEventListener("DOMContentLoaded", function () {
     selectAll.indeterminate =
       checkedCount > 0 && checkedCount < checkboxes.length;
 
-    // Получаем актуальный выбор
-    console.log(getSelectedCommunities());
+    // Сообщаем наружу (было console.log)
+    onChange(getSelectedCommunities());
   });
 
   window.setCommunities = setCommunities;
   window.getSelectedCommunities = getSelectedCommunities;
-});
-
-// Пример использования
-document.addEventListener("DOMContentLoaded", () => {
-  setCommunities(["УУНиТ", "Профбюро"], (selectedCommunities) => console.log(selectedCommunities));
 });
